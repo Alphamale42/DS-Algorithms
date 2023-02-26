@@ -1,0 +1,12 @@
+# Below is a basic implementation:
+
+def findElement(n, list):
+  for i in range(len(list)):
+    if list[i] == n:
+      return True
+  return False
+  
+list = [1, 4, 6, 8]
+findElement(6, list)
+
+# Best case: O(1), Worst/Average case: O(n)
