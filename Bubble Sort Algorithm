@@ -1,0 +1,40 @@
+// Below is a basic implemenatation for a bubble-sort algorithm.
+// Facts: It runs O(n^2) in all cases.
+
+def bubble sort(arr):
+  len_arr = len(arr)
+  for i in range(0, len_arr):
+    for j in range(0, len_arr - i - 1):
+      if arr[j] > arr[j+1]:
+        tmp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = tmp
+  return arr
+  
+// Below is an implementation of the selection sort algorithm:
+// Facts: It runs O(n^2) 
+
+def selection_sort(arr):
+  n = len(arr)
+  for i in range(0, n):
+    min_ind = i
+    for j in range(i+1, n):
+      if arr[j] < arr[min_ind]:
+        min_ind = j
+    arr[min_ind], arr[i] = arr[i], arr[min_ind]
+  return arr
+  
+  // Below is an implementation of an insertion sort algorithm:
+  
+  def insertion_sort(arr):
+    for i in range(1, len(arr)):
+      key = arr[i]
+      j = i - 1
+      while j>=0 and key < arr[i]:
+        arr[j+1] = arr[j]
+        j -= 1
+      arr[j+1] = key
+    return arr
+    
+    
+      
